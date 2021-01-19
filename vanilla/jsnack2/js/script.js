@@ -13,7 +13,7 @@ function randomNumber(min, max) {
 }
 // FINE FUNZIONI
 
-const campionato = [
+var campionato = [
   {
     nome: 'juventus',
     puntiFatti: 0,
@@ -38,8 +38,8 @@ const campionato = [
 
 // assegnare a puntiFatti e falliSubiti un numero random
 
-for(let i = 0; i < campionato.length; i++){
-  let squadra = campionato[i]
+for(var i = 0; i < campionato.length; i++){
+  var squadra = campionato[i]
   squadra.falliSubiti = randomNumber(0,10)
   squadra.puntiFatti = randomNumber(0,10)
 }
@@ -47,24 +47,14 @@ for(let i = 0; i < campionato.length; i++){
 console.log(campionato)
 
 // creare un nuovo array di oggetti senza la proprietà puntiFatti
-const nuovoCampionato = [];
-
-for(let i = 0; i < campionato.length; i++){
-
-  let vecchioCampionato = campionato[i]
-
-  const {nome, falliSubiti} = vecchioCampionato;
+var nuovoCampionato = [];
+for(var i = 0; i < campionato.length; i++){
+  var vecchioCampionato = campionato[i]
 
   nuovoCampionato.push({
-   nome,
-   falliSubiti,
+    nome: vecchioCampionato.nome,
+    falliSubiti: vecchioCampionato.falliSubiti
   })
-
-// ----------- es5
-//   nuovoCampionato.push({
-//     nome: vecchioCampionato.nome,
-//     falliSubiti: vecchioCampionato.falliSubiti
-//   })
 }
 
 console.log(nuovoCampionato)
