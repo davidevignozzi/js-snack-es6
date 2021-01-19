@@ -56,15 +56,15 @@ for(let i = 0; i < campionato.length; i++){
   const {nome, falliSubiti} = vecchioCampionato;
 
   nuovoCampionato.push({
-   nome,
-   falliSubiti,
+    nome, // nome: nome,
+    falliSubiti, // falliSubiti: falliSubiti,
   })
 
-// ----------- es5
-//   nuovoCampionato.push({
-//     nome: vecchioCampionato.nome,
-//     falliSubiti: vecchioCampionato.falliSubiti
-//   })
+// ----------------- ----------- es5 -------------
+//  ---------------- nuovoCampionato.push({
+//  ----------------  nome: vecchioCampionato.nome,
+//  ----------------  falliSubiti: vecchioCampionato.falliSubiti
+//  ---------------- })
 }
 
 console.log(nuovoCampionato)
